@@ -1,7 +1,8 @@
-import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PlaygroundHome from "./pages/playgroundHome";
 
 const App = () => {
-  return <div className="bg-red-500 font-bold border-collapse">App</div>;
+  return <PlaygroundHome />;
 };
 
 export default App;
