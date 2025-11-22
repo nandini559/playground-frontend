@@ -33,8 +33,8 @@ const PlaygroundHome = () => {
 
   return (
     <div className=" ">
-      <div className="grid place-items-center mt-20 ">
-        <h3 className="font-bold text-2xl">My API Playground</h3>
+      <div className="grid place-items-center p-10">
+        <h3 className="font-bold text-2xl mb-6">My API Playground</h3>
         <div className="bg-slate-100 flex gap-4 justify-center p-4">
           <div>
             <p className="font-bold">Profile Info:</p>
@@ -48,13 +48,13 @@ const PlaygroundHome = () => {
               </div>
             ))}
             <div className="mt-2">
-              <button className="bg-blue-500 rounded p-2 text-white mr-2">
+              <button className="bg-blue-600 hover:bg-blue-700 rounded-lg p-2 text-white font-semibold mr-2">
                 GitHub
               </button>
-              <button className="bg-blue-500 rounded p-2 text-white mr-2">
+              <button className="bg-blue-600 hover:bg-blue-700 rounded-lg p-2 text-white mr-2 font-semibold">
                 LinkedIn
               </button>
-              <button className="p-2 rounded border bg-slate-300">
+              <button className="p-2 rounded-lg border bg-slate-300 hover:bg-slate-400 font-semibold">
                 Portfolio
               </button>
             </div>
