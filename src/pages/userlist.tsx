@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getUser } from "../api/playgroundBackend";
+import { useNavigate } from "react-router-dom";
 
 const Userlist = () => {
   interface User {
@@ -11,6 +12,8 @@ const Userlist = () => {
   }
   const [user, setUser] = useState<User[]>([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Fetch user with ID 1
     getUser().then(setUser);
@@ -18,8 +21,8 @@ const Userlist = () => {
 
   return (
     <div>
-      <p className="text-5xl font-bold text-blue-600 p-2 font-Poppins text-center">
-        User List:
+      <p className="text-4xl font-bold text-blue-600 p-2 font-Poppins text-center">
+        Playground Users List:
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
         {user.map((data: any) => (
@@ -43,6 +46,12 @@ const Userlist = () => {
               <p className="text-gray-700">
                 <span className="font-semibold">links:</span> {data?.links}
               </p>
+              <button
+                className="bg-gradient-to-r from-pink-300 to-pink-400 text-white px-5 py-2 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-200"
+                onClick={() => navigate(`profile`)}
+              >
+                Profile
+              </button>
             </div>
           </div>
         ))}
